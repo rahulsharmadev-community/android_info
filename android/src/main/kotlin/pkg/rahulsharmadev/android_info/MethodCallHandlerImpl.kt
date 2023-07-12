@@ -41,7 +41,6 @@ internal class MethodCallHandlerImpl(
             map["manufacturer"] = Build.MANUFACTURER
             map["buildId"] = Build.DISPLAY // edit
             map["androidId"] = getAndroidId(applicationContext) //add
-            map["odmSku"] = Build.ODM_SKU  //add
             map["user"] = Build.USER  //add
             map["product"] = Build.PRODUCT
             map["radioVersion"]=Build.getRadioVersion() //add
