@@ -8,7 +8,6 @@ class AndroidDeviceInfo {
     required this.model,
     required this.androidId,
     required this.user,
-    required this.odmSku,
     required this.version,
     required this.board,
     required this.bootloader,
@@ -40,9 +39,6 @@ class AndroidDeviceInfo {
   final String androidId;
   final String user;
   final String radioVersion;
-
-  // The SKU of the device as set by the original design manufacturer (ODM).
-  final String odmSku;
 
   /// Android operating system version values derived from `android.os.Build.VERSION`.
   final AndroidBuildVersion version;
@@ -158,7 +154,6 @@ class AndroidDeviceInfo {
       radioVersion: map['radioVersion'],
       id: map['id'],
       user: map['user'],
-      odmSku: map['odmSku'],
       version: AndroidBuildVersion._fromMap(
           map['version']?.cast<String, dynamic>() ?? {}),
       board: map['board'],
